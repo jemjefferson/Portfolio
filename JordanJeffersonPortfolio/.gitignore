@@ -1,0 +1,12 @@
+# Exlcude bin folders
+bin/
+# Exclude obj folders
+obj/
+# Exclude publish folders
+publish/
+# Excludes .vs files
+*.vs
+# Ecludes Powerpoint documents
+*.pptx
+# Ecludes Visio documents
+*.vsdx

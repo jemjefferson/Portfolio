@@ -28,44 +28,57 @@ footer {
     text-align: right;
 }
 
-#projectsButton {
-    text-align: center;
-    background-color: orange;
-    color: black;
-    transform: scale(1.2);
-}
-
 a {
     text-decoration: none;
 }
 
-.sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 80px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #111; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
-}
-
-/* The navigation menu links */
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-}
-
-    /* When you mouse over the navigation links, change their color */
-    .sidenav a:hover {
-        color: #f1f1f1;
-    }
-
 img {
     height:5%;
     width: 5%;
+}
+
+#navPicture {
+    border-radius: 50%;
+    height: 4%;
+    width: 4%;
+}
+/*HOME PAGE*/
+
+.buttonContainer {
+    display: block;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+#projectsButton {
+    border-radius: 10%;
+    text-align: center;
+    background-color: yellow;
+    color: black;
+    transform: scale(1.5);
+    width: 10%;
+    height: 20%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 4px;
+}
+
+#projectsButton a {
+    color: black;
+}
+
+/*ABOUT PAGE*/
+
+#Aboutdiv{
+    display: flex;
+}
+#skillDiv {
+    float: left;
+    width: 50%;
+}
+#degreeDiv{
+    float: right;
+    width: 50%;
+}
+#degreeTable, #degreeTable tr, #degreeTable td, #degreeTable th {
+    border: 1px solid black;
 }

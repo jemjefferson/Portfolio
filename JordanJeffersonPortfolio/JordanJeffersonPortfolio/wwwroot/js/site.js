@@ -8,7 +8,7 @@ for (let i = 0; i < skills.length; i++) {
 }
 
 // Degree/Certificate Table
-let degrees = [{ Name: "Software Developer", Type: "Associates Degree", Year: 2023 }, { Name: "Software Development Specialist", Type: "Technical Degree", Year: 2022 },
+let degrees = [{ Name: "Software Developer", Type: "Associate Degree", Year: 2023 }, { Name: "Software Development Specialist", Type: "Technical Degree", Year: 2022 },
     { Name: "Junior Developer", Type: "Technical Degree", Year: 2022 }, { Name: "Mathematics", Type: "Certificate", Year: 2022 },
     {Name: "Communication", Type: "Certificate", Year: 2022}];
 
