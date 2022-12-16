@@ -68,7 +68,7 @@ img {
 
 /*ABOUT PAGE*/
 
-#Aboutdiv{
+#Aboutdiv {
     display: flex;
 }
 #skillDiv {
@@ -81,4 +81,30 @@ img {
 }
 #degreeTable, #degreeTable tr, #degreeTable td, #degreeTable th {
     border: 1px solid black;
+}
+
+/*CONTACT PAGE*/
+#form {
+    position: relative;
+    margin-left: 25%;
+    margin-right: 25%;
+    border: 1px solid black;
+}
+
+.form-group {
+    color: black;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+#submitButton {
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 30%;
 }
