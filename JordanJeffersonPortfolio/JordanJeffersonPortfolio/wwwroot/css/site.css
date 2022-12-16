@@ -40,13 +40,13 @@ a {
 }
 
 .sideNav {
-    height: 25%; /* Full-height: remove this if you want "auto" height */
-    width: 6%; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
+    height: 25%;
+    width: 6%;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 37%;
-    background-color: white; /* Black */
+    background-color: white;
     overflow-x: hidden;
     overflow-y: hidden;
     padding-top: 20px;
@@ -56,6 +56,7 @@ a {
 .sideNav a {
     padding: 6px 8px 6px 16px;
     display: block;
+    margin: auto;
 }
 
 .linkLogo {
@@ -66,26 +67,41 @@ a {
 
 /*HOME PAGE*/
 
+#homeTitle {
+    font-weight: 400;
+}
+
 .buttonContainer {
     display: block;
     margin: auto;
-    padding: 10px;
+    padding: 3%;
     text-align: center;
 }
 
 #projectsButton {
-    border-radius: 10%;
     text-align: center;
-    background-color: yellow;
+    background-color: #ffcc66;
     color: black;
     transform: scale(1.5);
     width: 10%;
     height: 20%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 4px;
+    border: none;
+}
+
+#projectsButton:hover {
+    background-color: #ff9933;
 }
 
 #projectsButton a {
     color: black;
+}
+
+#sumP {
+    margin: auto;
+    font-size: 120%;
+    width: 80%;
+    padding: 3%;
 }
 
 /*ABOUT PAGE*/
@@ -111,13 +127,14 @@ a {
     margin-left: 25%;
     margin-right: 25%;
     border: 1px solid black;
+    padding: 2%;
 }
 
 .form-group {
     color: black;
 }
 
-input {
+input, textarea {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -129,4 +146,5 @@ input {
     text-align: center;
     margin: auto;
     width: 30%;
+    height: 30%;
 }
