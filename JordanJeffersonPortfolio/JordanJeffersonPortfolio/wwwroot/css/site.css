@@ -26,11 +26,23 @@ footer {
 }
 
 .nav-item {
-    text-align: right;
+    font-size: 120%;
+    font-weight: 500;
 }
 
 a {
     text-decoration: none;
+}
+
+.nav-item:hover{
+    color: grey;
+}
+
+.navbar-brand {
+    position: absolute;
+    left: 6%;
+    font-size: 120%;
+    font-weight: 500;
 }
 
 #navPicture {
