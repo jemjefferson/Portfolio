@@ -1,3 +1,4 @@
+/*GENERAL AND LAYOUT STYLES*/
 html {
   font-size: 14px;
 }
@@ -32,16 +33,37 @@ a {
     text-decoration: none;
 }
 
-img {
-    height:5%;
-    width: 5%;
-}
-
 #navPicture {
     border-radius: 50%;
     height: 4%;
     width: 4%;
 }
+
+.sideNav {
+    height: 25%; /* Full-height: remove this if you want "auto" height */
+    width: 6%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    left: 0;
+    top: 37%;
+    background-color: white; /* Black */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-top: 20px;
+    border: 1px solid black;
+}
+
+.sideNav a {
+    padding: 6px 8px 6px 16px;
+    display: block;
+}
+
+.linkLogo {
+    height: 80%;
+    width: 80%;
+    margin: auto;
+}
+
 /*HOME PAGE*/
 
 .buttonContainer {
