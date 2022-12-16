@@ -111,14 +111,33 @@ a {
 }
 #skillDiv {
     float: left;
-    width: 50%;
+    width: 40%;
 }
+
+#skillList {
+    width: 100%;
+}
+
 #degreeDiv{
     float: right;
-    width: 50%;
+    width: 60%;
 }
-#degreeTable, #degreeTable tr, #degreeTable td, #degreeTable th {
+
+#degreeTable tr, #degreeTable td, #degreeTable th {
     border: 1px solid black;
+    padding: 1%;
+    text-align: center;
+}
+#degreeTable {
+    width: 100%;
+}
+
+#expDiv {
+    clear: both;
+    padding: 2%;
+}
+#expDiv h2 {
+    text-align: center;
 }
 
 /*CONTACT PAGE*/
