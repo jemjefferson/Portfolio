@@ -26,16 +26,18 @@ footer {
 }
 
 .nav-item {
+    display: block;
     font-size: 120%;
     font-weight: 500;
 }
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 .nav-item:hover{
-    color: grey;
+    background-color: grey;
 }
 
 .navbar-brand {
@@ -94,8 +96,8 @@ a {
     text-align: center;
     background-color: #ffcc66;
     color: black;
-    transform: scale(1.5);
-    width: 10%;
+    transform: scale(1.8);
+    width: 15%;
     height: 20%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 4px;
     border: none;
@@ -152,6 +154,45 @@ a {
     text-align: center;
 }
 
+/*PROJECTS PAGE*/
+
+.column {
+    float: left;
+    width: 33%;
+    padding: 0 10px;
+}
+
+.row {
+    margin: 0 -5px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+#cardPhoto {
+    width: 70%;
+    height: 70%;
+    margin: auto;
+}
+
 /*CONTACT PAGE*/
 #form {
     position: relative;
@@ -178,4 +219,15 @@ input, textarea {
     margin: auto;
     width: 30%;
     height: 30%;
+    text-align: center;
+    background-color: #ffcc66;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 4px;
+    border: none;
+    transform: scale(1.5);
+}
+
+#submitButton:hover {
+    background-color: #ff9933;
+
 }
