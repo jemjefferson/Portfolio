@@ -1,4 +1,13 @@
+@font-face{
+    font-family: 'RobotoSlab';
+    src: url(../fonts/RobotoSlab-VariableFont_wght.ttf);
+}
+
 /*GENERAL AND LAYOUT STYLES*/
+* {
+    font-family: 'RobotoSlab', Garamond;
+}
+
 html {
   font-size: 14px;
 }
@@ -29,6 +38,7 @@ footer {
     display: block;
     font-size: 120%;
     font-weight: 500;
+    transition: box-shadow 0.1s;
 }
 
 a {
@@ -36,8 +46,8 @@ a {
     color: black;
 }
 
-.nav-item:hover{
-    background-color: grey;
+.nav-item:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 4px;
 }
 
 .navbar-brand {
@@ -54,21 +64,22 @@ a {
 }
 
 .sideNav {
-    height: 25%;
-    width: 6%;
+    height: 18%;
+    width: 5%;
     position: fixed;
     z-index: 1;
-    left: 0;
     top: 37%;
     background-color: white;
     overflow-x: hidden;
     overflow-y: hidden;
     padding-top: 20px;
     border: 1px solid black;
+    border-radius: 30px;
+    left: 5px;
 }
 
 .sideNav a {
-    padding: 6px 8px 6px 16px;
+    padding: 0px 8px 6px 16px;
     display: block;
     margin: auto;
 }
@@ -177,6 +188,11 @@ a {
     padding: 16px;
     text-align: center;
     background-color: #f1f1f1;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.03);
 }
 
 @media screen and (max-width: 600px) {
