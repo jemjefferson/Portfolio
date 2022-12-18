@@ -115,7 +115,11 @@ a {
 }
 
 #projectsButton:hover {
-    background-color: #ff9933;
+    background-color: #FFAE42;
+}
+
+#projectsButton:active {
+        background-color: #ff9933;
 }
 
 #projectsButton a {
@@ -149,12 +153,23 @@ a {
 }
 
 #degreeTable tr, #degreeTable td, #degreeTable th {
-    border: 1px solid black;
     padding: 1%;
     text-align: center;
 }
 #degreeTable {
     width: 100%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 4px;
+}
+
+#degreeTable th {
+    background-color: #ffcc66;
+    font-weight: 700;
+    font-size: large;
+}
+
+#degreeTable td {
+    font-weight: 400;
 }
 
 #expDiv {
@@ -163,6 +178,52 @@ a {
 }
 #expDiv h2 {
     text-align: center;
+}
+
+.column2 {
+    float: left;
+    border-radius: 8px;
+    padding: 1%;
+    vertical-align: middle;
+    background-color: #d3d3d3;
+    margin: 0.7%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 4px;
+    font-weight: 550;
+}
+
+.row2 {
+}
+
+.skillText {
+    display:table-cell;
+    vertical-align: middle;
+}
+
+.tableRow1 {
+    background-color: white;
+}
+
+.tableRow2 {
+    background-color: #F1F1F1;
+}
+
+.tableRow1:hover, .tableRow2:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 4px;
+}
+
+.jobCard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    background-color: #f1f1f1;
+    margin: auto;
+    width: 80%;
+    transition: transform 0.2s;
+}
+
+.jobCard:hover {
+    transform: scale(1.03);
+
 }
 
 /*PROJECTS PAGE*/
@@ -209,6 +270,21 @@ a {
     margin: auto;
 }
 
+#cardPhoto2 {
+    width: 60%;
+    height: 60%;
+    margin: auto;
+}
+
+.space {
+    padding: 1%;
+}
+
+#projectText {
+    text-align: center;
+    padding-top: 3%;
+}
+
 /*CONTACT PAGE*/
 #form {
     position: relative;
@@ -216,6 +292,8 @@ a {
     margin-right: 25%;
     border: 1px solid black;
     padding: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #f1f1f1;
 }
 
 .form-group {
@@ -244,6 +322,13 @@ input, textarea {
 }
 
 #submitButton:hover {
-    background-color: #ff9933;
+    background-color: #FFAE42;
+}
 
+#submitButton:active {
+    background-color: #ff9933;
+}
+
+#contactTitle {
+    text-align: center;
 }

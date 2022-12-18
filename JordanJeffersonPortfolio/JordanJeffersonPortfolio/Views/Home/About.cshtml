@@ -1,21 +1,32 @@
 ﻿@{
     ViewData["Title"] = "About Me";
-    List<string> jobTasks = new List<string>() 
-    { "Write functional code in order to update and test the company website.",
+    List<string> jobTasks = new List<string>()
+    { 
+      "Write functional code in order to update and test the company website.",
       "Optimize ASP.NET, JavaScript, HTML, & CSS.",
       "Lead a team of employees in order to fulfill orders in a set amount of time.",
-      "Configure, troubleshoot, and work with Stone Edge Order Manager for inventory and orders."};
+      "Configure, troubleshoot, and work with Stone Edge Order Manager for inventory and orders"
+    };
+
+    List<string> skills = new List<string>()
+    {
+        "C#", ".NET Framework", "ASP.NET MVC", "HTML5", "CSS3", "JavaScript", "T-SQL", "SQL Server", "SSIS",
+        "Web APIs", "Azure DevOps", "Azure Services", "Communication", "Technical Writing"
+    };
 }
-<h1>@ViewData["Title"]</h1>
 <div id="aboutDiv">
-<div id="skillDiv">
+<div id="skillDiv" class="row2">
     <h2>Skills</h2>
-    <ul id="skillList">
-    </ul>
+        @foreach (string s in skills){
+            <div class="column2">
+                <div>
+                    <p class="skillText">@s</p>
+                </div>
+            </div>
+    }
 </div>
 <div id="degreeDiv">
     <h2>Education</h2>
-    <p>School: Northcentral Technical College</p>
     <table id="degreeTable">
         <tr>
             <th>Name</th>
@@ -27,8 +38,10 @@
 </div>
 <div id="expDiv">
     <h2>Relevant Experience</h2>
+    <div class="jobCard">
     <h4>Front-End Developer/Lead Computer Assembler</h4>
     @foreach (string s in jobTasks){
         <p>-@s</p>
     }
+    </div>
 </div>

@@ -42,6 +42,11 @@ namespace JordanJeffersonPortfolio.Controllers
             return View(model);
         }
 
+        public ActionResult DownloadEmpSim()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult SendEmail(Models.Email email)
         {
