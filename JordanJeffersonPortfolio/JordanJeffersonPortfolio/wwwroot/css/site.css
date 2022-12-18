@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  background-image: url('/images/background.jpg');
+  background-image: url('/images/background2.jpg');
   background-size: 100%;
   margin-bottom: 60px;
 }
@@ -76,6 +76,7 @@ a {
     border: 1px solid black;
     border-radius: 30px;
     left: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 4px;
 }
 
 .sideNav a {
