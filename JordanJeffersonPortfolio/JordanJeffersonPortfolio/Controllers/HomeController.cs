@@ -56,25 +56,32 @@ namespace JordanJeffersonPortfolio.Controllers
                 return RedirectToAction(nameof(Contact));
             }
 
-            MailMessage message = new MailMessage()
+            try
             {
-                From = new MailAddress(email.UserEmail),
-                Subject = email.Subject,
-                Body = $"Email: {email.UserEmail}\nSubject: {email.Subject}\nMessage: {email.Message}"
-            };
+                MailMessage message = new MailMessage()
+                {
+                    From = new MailAddress(email.UserEmail),
+                    Subject = email.Subject,
+                    Body = $"Email: {email.UserEmail}\nSubject: {email.Subject}\nMessage: {email.Message}"
+                };
 
-            SmtpClient smtpClient = new SmtpClient()
+                SmtpClient smtpClient = new SmtpClient()
+                {
+                    Port = 587,
+                    Host = "smtp.gmail.com",
+                    EnableSsl = true,
+                    UseDefaultCredentials = false,
+                    Credentials = new NetworkCredential("jemjefferson@gmail.com", "zrghocxybkounkny"),
+                    DeliveryMethod = SmtpDeliveryMethod.Network
+                };
+
+                message.To.Add("jemjefferson@gmail.com");
+                smtpClient.Send(message);
+            }
+            catch (Exception e)
             {
-                Port = 587,
-                Host = "smtp.gmail.com",
-                EnableSsl = true,
-                UseDefaultCredentials = false,
-                Credentials = new NetworkCredential("jemjefferson@gmail.com", "zrghocxybkounkny"),
-                DeliveryMethod = SmtpDeliveryMethod.Network
-            };
-
-            message.To.Add("jemjefferson@gmail.com");
-            smtpClient.Send(message);
+                return RedirectToAction(nameof(Contact));
+            }
 
             return RedirectToAction(nameof(Contact));
         }
