@@ -64,31 +64,23 @@ a {
 }
 
 .sideNav {
-    height: 18%;
-    width: 5%;
     position: fixed;
-    z-index: 1;
     top: 37%;
-    background-color: white;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    padding-top: 20px;
-    border: 1px solid black;
-    border-radius: 30px;
     left: 5px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 4px;
-}
-
-.sideNav a {
-    padding: 0px 8px 6px 16px;
-    display: block;
-    margin: auto;
+    width: 4%;
 }
 
 .linkLogo {
-    height: 80%;
-    width: 80%;
-    margin: auto;
+    display: block;
+    position: relative;
+    clear: left;
+    width: 90%;
+    height: 90%;
+    padding-top: 6px;
+}
+
+.error {
+    color: red;
 }
 
 /*HOME PAGE*/
@@ -227,6 +219,10 @@ a {
 
 }
 
+.aboutTitle {
+    text-align: center;
+}
+
 /*PROJECTS PAGE*/
 
 .column {
@@ -332,4 +328,10 @@ input, textarea {
 
 #contactTitle {
     text-align: center;
+}
+
+#contactP {
+    margin: auto;
+    font-size: 120%;
+    width: 80%;
 }

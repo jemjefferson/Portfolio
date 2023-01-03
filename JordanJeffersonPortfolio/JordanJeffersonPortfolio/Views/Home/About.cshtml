@@ -16,7 +16,7 @@
 }
 <div id="aboutDiv">
 <div id="skillDiv" class="row2">
-    <h2>Skills</h2>
+    <h2 class="aboutTitle">Skills</h2>
         @foreach (string s in skills){
             <div class="column2">
                 <div>
@@ -26,12 +26,11 @@
     }
 </div>
 <div id="degreeDiv">
-    <h2>Education</h2>
+    <h2 class="aboutTitle">Education</h2>
     <table id="degreeTable">
         <tr>
             <th>Name</th>
             <th>Type</th>
-            <th>Year</th>
         </tr>
     </table>
 </div>
@@ -39,9 +38,13 @@
 <div id="expDiv">
     <h2>Relevant Experience</h2>
     <div class="jobCard">
-    <h4>Front-End Developer/Lead Computer Assembler</h4>
-    @foreach (string s in jobTasks){
-        <p>-@s</p>
-    }
+        <p><h4>Front-End Developer/Lead Computer Assembler</h4> July 2021 - Present</p>
+        @foreach (string s in jobTasks)
+        {
+            <p>-@s</p>
+        }
     </div>
+</div>
+<div class="buttonContainer">
+    <button id="projectsButton"><a href="..\docs\Resume.pdf" target="_blank">Resume</a></button>
 </div>

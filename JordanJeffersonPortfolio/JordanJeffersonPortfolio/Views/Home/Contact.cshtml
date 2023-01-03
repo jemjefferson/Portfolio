@@ -1,7 +1,7 @@
 ﻿@model Email
 <div>
     <div>
-        <form method="post" asp-action="SendEmail" class="portfolioForm" id="form">
+        <form method="post" class="portfolioForm" id="form">
             <div id="contactTitle">
             <h2>Contact Me</h2>
             </div>
@@ -9,6 +9,10 @@
                 <label asp-for="UserEmail"></label>
                 <input asp-for="UserEmail" required/>
                 <span asp-validation-for="UserEmail"></span>
+                @if (ViewBag.Error != null)
+                {
+                    <p class="error">@ViewBag.Error</p>
+                }
             </div>
             <div class="form-group">
                 <label asp-for="Subject"></label>

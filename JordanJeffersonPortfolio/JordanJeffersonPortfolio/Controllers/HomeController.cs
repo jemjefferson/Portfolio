@@ -47,13 +47,13 @@ namespace JordanJeffersonPortfolio.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult SendEmail(Models.Email email)
+        [HttpPost("contact")]
+        public ActionResult Contact(Models.Email email)
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
             if (!ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Contact));
+                return View();
             }
 
             try
@@ -80,10 +80,16 @@ namespace JordanJeffersonPortfolio.Controllers
             }
             catch (Exception e)
             {
-                return RedirectToAction(nameof(Contact));
+                ViewBag.Error = "Please enter a valid email address.";
+                return View();
             }
 
-            return RedirectToAction(nameof(Contact));
+            return RedirectToAction(nameof(ContactSuccess));
+        }
+
+        public IActionResult ContactSuccess()
+        {
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
