@@ -282,6 +282,14 @@ a {
     padding-top: 3%;
 }
 
+.desc {
+    width: 50%;
+    margin: auto;
+    margin-top: 5px;
+    border: solid black 1px;
+    text-align: center;
+}
+
 /*CONTACT PAGE*/
 #form {
     position: relative;

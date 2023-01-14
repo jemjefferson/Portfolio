@@ -92,6 +92,14 @@ namespace JordanJeffersonPortfolio.Controllers
             return View();
         }
 
+        public void PigLatin()
+        {
+            string sCurrentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string sFile = System.IO.Path.Combine(sCurrentDirectory, "\\..\\ConsoleApps\\PigLatinTranslator\\PigLatinTranslator.exe");
+            string sFilePath = Path.GetFullPath(sFile);
+            Process.Start(sFilePath);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
