@@ -1,5 +1,5 @@
 ﻿// Degree/Certificate Table
-let degrees = [{ Name: "Software Developer", Type: "Associate Degree"}, { Name: "Software Development Specialist", Type: "Technical Degree"},
+let degrees = [{ Name: "Software Engineering", Type: "Bachelor of Science" },{Name: "Software Developer", Type: "Associate Degree"}, { Name: "Software Development Specialist", Type: "Technical Degree"},
     { Name: "Junior Developer", Type: "Technical Degree" }, { Name: "Mathematics", Type: "Certificate"},
     {Name: "Communication", Type: "Certificate"}];
 

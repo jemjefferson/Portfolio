@@ -1,11 +1,10 @@
-﻿using FluentEmail.Core;
-using FluentEmail.Smtp;
-using JordanJeffersonPortfolio.Models;
+﻿using JordanJeffersonPortfolio.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Hosting.Internal;
 using System.Diagnostics;
 using System.Net;
 using System.Net.Mail;
-using System.Security.Cryptography.X509Certificates;
+using System.Web;
 
 namespace JordanJeffersonPortfolio.Controllers
 {
@@ -32,7 +31,9 @@ namespace JordanJeffersonPortfolio.Controllers
         [Route("projects")]
         public IActionResult Projects()
         {
-            return View();
+            ProjectViewModel vm = new ProjectViewModel();
+            vm.WebApps = Util.GetWebApps();
+            return View(vm);
         }
 
         [Route("contact")]
@@ -98,6 +99,8 @@ namespace JordanJeffersonPortfolio.Controllers
             string sFile = System.IO.Path.Combine(sCurrentDirectory, "\\..\\ConsoleApps\\PigLatinTranslator\\PigLatinTranslator.exe");
             string sFilePath = Path.GetFullPath(sFile);
             Process.Start(sFilePath);
+
+            string filename = "PigLatinTranslator.zip";
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
