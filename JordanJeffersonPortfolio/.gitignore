@@ -10,3 +10,4 @@ publish/
 *.pptx
 # Ecludes Visio documents
 *.vsdx
+.vs/
