@@ -25,5 +25,31 @@ namespace JordanJeffersonPortfolio
 
             return projects;
         }
+
+        public static List<Project> GetConsoleApps()
+        {
+            List<Project> projects = new List<Project>();
+            Project p = new Project();
+            p.Name = "Pig Latin Translator";
+            p.Image = "../images/piglatintranslator.png";
+            p.Description = "Translate from English to Pig Latin.";
+            p.Action = "RunPigLatin";
+            projects.Add(p);
+
+            return projects;
+        }
+
+        public static List<Project> GetWPFApps()
+        {
+            List<Project> projects = new List<Project>();
+            Project p = new Project();
+            p.Name = "Employee Management Simulator";
+            p.Image = "../images/em.png";
+            p.Description = "Create, manage, and notify employees.";
+            p.Action = "InstallEM";
+            projects.Add(p);
+
+            return projects;
+        }
     }
 }

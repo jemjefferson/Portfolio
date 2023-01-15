@@ -7,5 +7,6 @@
         public string Link { get; set; }
         public string Description { get; set; }
         public string FrameWork { get; set; }
+        public string? Action { get; set; }
     }
 }
