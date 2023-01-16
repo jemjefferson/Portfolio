@@ -41,7 +41,7 @@ namespace JordanJeffersonPortfolio
             p.Name = "Jefferson Zoo (Console)";
             p.Image = "../images/jeffersonzooconsole.png";
             p.Link = "https://www.dropbox.com/s/otly25wgljfkoyj/JeffersonZooConsole.zip?dl=0";
-            p.Description = "";
+            p.Description = "Create and customize your own zoo!";
             projects.Add(p);
 
             return projects;
@@ -61,7 +61,7 @@ namespace JordanJeffersonPortfolio
             p.Name = "Jefferson Zoo (WPF)";
             p.Image = "../images/jeffersonzoowpf.png";
             p.Link = "https://www.dropbox.com/s/kfo08ck7s1vqcph/JeffersonZooWPF.zip?dl=0";
-            p.Description = "";
+            p.Description = "Create and customize your own zoo!";
             projects.Add(p);
 
             return projects;
