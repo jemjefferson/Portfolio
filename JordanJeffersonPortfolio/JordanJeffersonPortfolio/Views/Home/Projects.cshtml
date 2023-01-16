@@ -42,8 +42,10 @@
                     <img src="@p.Image" id="cardPhoto"/>
                     <p>@p.Description</p>
                 </div>
-            <div class="console">
-                <button class="consolebtn" onclick="location.href='@Url.Action("DownloadPig","Project")'">Download</button>
+            <div>
+                <form class="console" action="@p.Link" method="get" target="_blank">
+                    <button class="consolebtn" type="submit">Download</button>
+                </form>
             </div>
     </div>
 }
@@ -61,8 +63,10 @@
                 <img src="@p.Image" id="cardPhoto" />
                 <p>@p.Description</p>
             </div>
-            <div class="console">
-                <button class="consolebtn" disabled>Download</button>
+            <div>
+                <form class="console" action="@p.Link" method="get" target="_blank">
+                    <button class="consolebtn" type="submit">Download</button>
+                </form>
             </div>
         </div>
     }

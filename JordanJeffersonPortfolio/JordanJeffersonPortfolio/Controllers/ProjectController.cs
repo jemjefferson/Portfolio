@@ -29,21 +29,32 @@ namespace JordanJeffersonPortfolio.Controllers
 
         public async Task DownloadPig()
         {
-            var dbx2 = new DropboxClient("sl.BXCoVar9kC5Dq4nzFc0BxwwBWrumpJWZGGSdl44AuwS1griyLRDKBKczxTRRx56DaIcsamkyuW8UL17au56-7y4hWsXYeUgp8zRcuAJNYxrIqIMv8su6VE3myilHIjwEkm3XSwCn");
-            using (var dbx = new DropboxClient("sl.BXCoVar9kC5Dq4nzFc0BxwwBWrumpJWZGGSdl44AuwS1griyLRDKBKczxTRRx56DaIcsamkyuW8UL17au56-7y4hWsXYeUgp8zRcuAJNYxrIqIMv8su6VE3myilHIjwEkm3XSwCn"))
+            string token = "sl.BXAEdcomvgzG6vQR12yBb1a75XZgXvwcM7A03d09dhmDr7G7Km6p8KOkhmLVomkfRBL7hZ2gLjwwxbcGVT2IikisbnQfwLkJ-8wa_-jrwhCuQaYFah5KkvDA9YTWU6B_pRaX7h5a";
+            using (var dbx = new DropboxClient(token))
             {
-                var full = await dbx.Users.GetCurrentAccountAsync();
-                Console.WriteLine("{0} - {1}", full.Name.DisplayName, full.Email);
-            }
-            string folder = "/Apps/JordanJeffersonPortfolio/PigLatinTranslator";
-            string file = "PigLatinTranslator.zip";
-            using (var response = await dbx2.Files.DownloadAsync(folder + "/" + file))
-            {
-                var s = response.GetContentAsByteArrayAsync();
-                s.Wait();
-                var d = s.Result;
-                System.IO.File.WriteAllBytes(file, d);
-                Console.WriteLine("Im working.");
+                string folder = "";
+                string file = "PigLatinTranslator.zip";
+                Console.WriteLine("Folders");
+
+                var list = await dbx.Files.ListFolderAsync(string.Empty);
+                foreach (var item in list.Entries.Where(i => i.IsFolder))
+                {
+                    Console.WriteLine(item.Name);
+                }
+                Console.WriteLine("Files");
+
+                foreach (var item in list.Entries.Where(i => i.IsFile))
+                {
+                    Console.WriteLine(item.Name, item.AsFile.Size);
+                }
+
+                using (var response = await dbx.Files.DownloadAsync(folder + "/" + file))
+                {
+                    var s = response.GetContentAsByteArrayAsync();
+                    s.Wait();
+                    var d = s.Result;
+                    System.IO.File.WriteAllBytes(file, d);
+                }
             }
         }
     }

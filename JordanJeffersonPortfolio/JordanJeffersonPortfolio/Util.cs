@@ -33,8 +33,15 @@ namespace JordanJeffersonPortfolio
             Project p = new Project();
             p.Name = "Pig Latin Translator";
             p.Image = "../images/piglatintranslator.png";
+            p.Link = "https://www.dropbox.com/s/kcg24z9fha27cyu/PigLatinTranslator.zip?dl=0";
             p.Description = "Translate from English to Pig Latin.";
-            p.Action = "RunPigLatin";
+            projects.Add(p);
+
+            p = new Project();
+            p.Name = "Jefferson Zoo (Console)";
+            p.Image = "../images/jeffersonzooconsole.png";
+            p.Link = "https://www.dropbox.com/s/otly25wgljfkoyj/JeffersonZooConsole.zip?dl=0";
+            p.Description = "";
             projects.Add(p);
 
             return projects;
@@ -46,8 +53,15 @@ namespace JordanJeffersonPortfolio
             Project p = new Project();
             p.Name = "Employee Management Simulator";
             p.Image = "../images/em.png";
+            p.Link = "https://www.dropbox.com/s/8n829etxi9devl5/EmployeeManagementSimulator.zip?dl=0";
             p.Description = "Create, manage, and notify employees.";
-            p.Action = "InstallEM";
+            projects.Add(p);
+
+            p = new Project();
+            p.Name = "Jefferson Zoo (WPF)";
+            p.Image = "../images/jeffersonzoowpf.png";
+            p.Link = "https://www.dropbox.com/s/kfo08ck7s1vqcph/JeffersonZooWPF.zip?dl=0";
+            p.Description = "";
             projects.Add(p);
 
             return projects;
