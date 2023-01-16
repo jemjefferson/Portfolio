@@ -43,8 +43,7 @@
                     <p>@p.Description</p>
                 </div>
             <div class="console">
-                <button class="consolebtn" onclick="location.href='@Url.Action($"{p.Action}", "Project")'">Run</button>
-                <button class="consolebtn" disabled>Download</button>
+                <button class="consolebtn" onclick="location.href='@Url.Action("DownloadPig","Project")'">Download</button>
             </div>
     </div>
 }
@@ -63,7 +62,6 @@
                 <p>@p.Description</p>
             </div>
             <div class="console">
-                <button class="consolebtn" onclick="location.href='@Url.Action($"{p.Action}", "Project")'">Run</button>
                 <button class="consolebtn" disabled>Download</button>
             </div>
         </div>

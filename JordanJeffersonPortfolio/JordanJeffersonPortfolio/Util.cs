@@ -1,4 +1,5 @@
-﻿using JordanJeffersonPortfolio.Models;
+﻿using Dropbox.Api;
+using JordanJeffersonPortfolio.Models;
 
 namespace JordanJeffersonPortfolio
 {
@@ -50,6 +51,15 @@ namespace JordanJeffersonPortfolio
             projects.Add(p);
 
             return projects;
+        }
+
+        public static async Task Run()
+        {
+            using (var dbx = new DropboxClient("sl.BW-vgIJczeHUHEDDWCqwThp40aFzycTfzspZ0PLMsEinCoyreOS0TEsMzz55ea006Azrg1qQX4xWudeN4548lDG0YjZZiUeI5fF15IYtDlrY5pifr3EI_moJ5Eo55TEgBz45jlI"))
+            {
+                var full = await dbx.Users.GetCurrentAccountAsync();
+                Console.WriteLine("{0} - {1}", full.Name.DisplayName, full.Email);
+            }
         }
     }
 }
